@@ -1,58 +1,70 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <link href="Mission1.css" rel="stylesheet">
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <link href="Mission1.css" rel="stylesheet" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>WAHS NEXT?</title>
-    <link rel="icon" type="image/x-icon" href="WAHSfavicon.png">
-</head>
-<body class="home-page">
+    <script src="script.js" defer></script>
+  </head>
+  <body class="home-page">
     <!-- Header -->
-     <header class="header">
-        <div class="bigwah"><h1>WAHS NEXT!</h1></div>
-        
-        <img src="Warriors_(NRL)_Logo.png" alt="WarriorsLogo">
-        
-        <p>Keep up to date with all the ONE NZ WARRIORS 2025 season games.</p>   
+    <header class="header">
+      <div class="bigwah"><h1>WAHS NEXT!</h1></div>
 
-     </header>
+      <img src="Warriors_(NRL)_Logo.png" alt="WarriorsLogo" />
 
-    <!-- Navigation Bar -->
-      <nav>
-        <a href="Mission1.html">This Week</a>
-        <a href="#">Next Week</a>
-        <a href="#">Last Week</a>
-        <a href="contact.html">Give us a Wahssup</a>
-       </nav>
+      <p>Keep up to date with all the ONE NZ WARRIORS 2025 season games.</p>
+    </header>
 
-    <!-- Content -->
+    <nav>
+      <a href="Mission1.html">This Week</a>
+      <a href="#">Next Week</a>
+      <a href="#">Last Week</a>
+      <a href="contact.html">Give us a Wahssup</a>
+    </nav>
 
-     <main>
-        <section id="left">
+    <main>
+      <section id="left">
+        <!-- Content for left column -->
+        <div id="nrl-ladder-imgph">
+          <div id="nrl-ladder-title">
+            <h2>CURRENT TOP 8</h2>
+          </div>
+          <a
+            href="https://www.nrl.com/ladder/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <img id="nrl-ladder" src="nrl-ladder2.PNG" alt="NRL LADDER" />
+          </a>
+        </div>
+      </section>
 
-            <!-- Content for left column -->   
-                       
-                <div id="nrl-ladder-imgph">
-                    <div id="nrl-ladder-title">
-                    <h2>CURRENT TOP 8</h2>
-                    </div>
-                    <img id="nrl-ladder" src="nrl-ladder.png" alt="NRL LADDER">
-                </div>
-                                
-        </section>
-                    
-        <section id="right">
-                 
-            <img id="image" src="This-week.png" alt="Thisweeksgames"/>
-                
-        </section>
-     </main>
-    <!-- Footer -->
-     <footer>
-        <h3>Copyright 2025 by UPDAFLIPPINWAHSMABAH.. All rights reserved.</h3>
-     </footer>
- 
+      <section id="right">
+        <div id="vote-section">
+          <h2>Vote for YOUR Player of the Week!!!!</h2>
 
-</body>
+          <button class="vote-btn" data-player="Johnson">
+            Vote Johnson (<span id="count-Johnson">0</span>)
+          </button>
+
+          <button class="vote-btn" data-player="Tohu">
+            Vote Tohu (<span id="count-Tohu">0</span>)
+          </button>
+
+          <button class="vote-btn" data-player="DWZ">
+            Vote DWZ (<span id="count-DWZ">0</span>)
+          </button>
+
+          <p id="vote-results"></p>
+          <p id="leader"></p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <h3>Copyright 2025 by UPDAFLIPPINWAHSMABAH.. All rights reserved.</h3>
+    </footer>
+  </body>
 </html>

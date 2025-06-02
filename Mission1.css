@@ -1,193 +1,277 @@
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
 /* Style the body */
 body {
-    font-family: Arial;
-    font-size: 16;
-    margin: 0;
+  font-family: Arial;
+  font-size: 16;
+  margin: 0;
 }
 
-
 main {
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* Center the image on home page */
 .home-page #image {
-    max-width: 100%;
-    height: auto;
-    display:block;
-    margin: 0 auto;
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin: 0 auto;
 }
 
 /* Center the form on contact page */
 .contact-page .form-container {
-    width: 100%;
-    max-width: 500px;
-    padding: 20px;
-    margin: 0 auto;
+  width: 100%;
+  max-width: 500px;
+  padding: 20px;
+  margin: 0 auto;
 
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 
-    /* border: 2px solid #080079;
+  /* border: 2px solid #080079;
     border-radius: 10px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); */
 }
 
-h2{
-    font-weight: 900;
+h1 {
+  font-size: xx-large;
+}
+
+h2 {
+  font-weight: 900;
 }
 
 /* Header - logo or title */
 .header {
-    padding: 30px;
-    text-align: center;
-    color: white;
-    background-size: cover;
-    background-image: linear-gradient(to right, rgb(4, 119, 0), rgb(10, 1, 1), rgb(0, 38, 255));
-    background-repeat: no-repeat;
-    
+  padding: 30px;
+  text-align: center;
+  color: white;
+  background-size: cover;
+  background-image: linear-gradient(
+    to right,
+    rgb(4, 119, 0),
+    rgb(10, 1, 1),
+    rgb(0, 38, 255)
+  );
+  background-repeat: no-repeat;
 }
 
 .bigwah h1 {
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 90px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 90px;
 }
 
 /* Style nav bar as flexbox */
-nav{
-    display: flex;
-    background-color: #080079;
-    justify-content: center;
-    padding: 10px;
+nav {
+  display: flex;
+  background-color: #080079;
+  justify-content: center;
+  padding: 10px;
 }
 
 /* Style navigation bar links */
-nav a{
-    color: white;
-    padding: 25px 40px;
-    text-decoration: none;
-    text-align: center;
-    font-family: Arial, Helvetica, sans-serif;
-    font-weight: 700;
-    font-size: x-large;
+nav a {
+  color: white;
+  padding: 25px 40px;
+  text-decoration: none;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 700;
+  font-size: x-large;
 }
 
 /* Change color on hover */
-nav a:hover{
-    background-color: #044d0a;
-    color: white;
+nav a:hover {
+  background-color: #044d0a;
+  color: white;
 }
 
 /* For different screen sizes */
-@media  screen and (max-width: 768px) {
-    nav, main, .form-container {
-        flex-direction: column;
-    }
-    
+@media screen and (max-width: 768px) {
+  nav,
+  main,
+  .form-container {
+    flex-direction: column;
+  }
 }
 
 @media screen and (max-width: 600px) {
-        nav {
-        font-size: 24px;
-    }
+  nav {
+    font-size: 24px;
+  }
 }
 
 /* NRL LADDER */
 #left {
-    display: flex;
-    padding: 40px;
-    width: 20%;
-    height: auto;
-    
+  display: flex;
+  padding: 40px;
+  width: 30%;
+  height: auto;
 }
 
 /* MAIN CONTENT AREA */
 #right {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    image-resolution: 100%;
-    padding: 50px;
-    width: 40%;
-    min-height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  image-resolution: 100%;
+  padding: 50px;
+  width: 40%;
+  min-height: 400px;
 }
 
+/* Voting Section Styling */
+#vote-section {
+  margin-top: 30px;
+  padding: 20px;
+  border: 2px solid #080079; /* deep blue for sporty feel */
+  border-radius: 10px;
+  background-color: #f0f8ff; /* light background */
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+#vote-section h2 {
+  color: #080079;
+  margin-bottom: 15px;
+  font-size: 1.5em;
+}
+
+.vote-btn {
+  background-color: #080079cc;
+  color: white;
+  font-size: 1em;
+  padding: 10px 20px;
+  margin: 8px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.vote-btn:hover {
+  background-color: #005fa3;
+}
+
+#vote-results,
+#leader {
+  margin-top: 15px;
+  font-weight: bold;
+  color: #333;
+  font-size: 1.1em;
+}
 
 /* NRL Ladder Image placeholder*/
 #nrl-ladder-imgph {
-    width: auto;
-    height: auto;
-    position:static;
+  width: 500px; /* Fixed width for container */
+  height: auto; /* Auto height, so it adjusts to the content */
+  min-width: 500px; /* Prevents shrinking below 500px */
+  min-height: 300px; /* Prevents shrinking below 300px */
+  overflow: hidden; /* Prevents content from spilling outside */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Stack title and image vertically */
+  background-color: #f0f8ff;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centers the container horizontally */
 }
 
 /* NRL Ladder Animation */
 @keyframes example {
-    0% {left:0px; top: 0px;}
-    25%{left: 0px; top: 10px;}
-    50%{left: 0px; top: 20px;}
-    75%{left: 0px; top: 10px;}
-   100%{left: 0px; top: 0px;}
-} 
-
-
-#nrl-ladder-title {
-    text-align-last: center;
+  0% {
+    transform: translateX(0); /* Start position */
+  }
+  25% {
+    transform: translateX(10px); /* Move slightly down */
+  }
+  50% {
+    transform: translateX(20px); /* Move further down */
+  }
+  75% {
+    transform: translateX(15px); /* Move back up */
+  }
+  100% {
+    transform: translateX(0); /* End position */
+  }
 }
 
+#nrl-ladder-title {
+  color: #080079;
+  font-size: 1.3em; /* Adjust font size */
+  font-weight: 900;
+  margin: 0;
+  text-align: center;
+  padding: 10px; /* Add padding to separate title from the image */
+}
+
+#nrl-ladder-title h2 {
+  color: #080079;
+  font-size: 1.5em;
+  font-weight: 900;
+  margin: 0;
+}
 
 #nrl-ladder {
-    max-width: 100%;
-    align-items: center;
-    height: auto;
-    border:#080079 3px solid;
-    position: relative;
-    animation: example;
-    animation-duration: 4s;
-    animation-iteration-count: infinite;
-    transition: height 4s, border-radius 4s;
-    transition-timing-function: ease-in-out;
+  max-width: 100%; /* Ensure the image doesn't exceed the container width */
+  max-height: 100%; /* Ensure the image doesn't exceed the container height */
+  object-fit: contain; /* Maintain aspect ratio and fit the image within the container */
+  border-radius: 5px;
+  border: 3px solid #080079;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  display: block;
+  margin: 0 auto;
+  animation: example 4s infinite ease-in-out; /* Reapply the animation */
+  transition: height 4s, border-radius 4s;
+}
+
+#nrl-ladder:hover {
+  cursor: pointer;
+  opacity: 0.75;
+  transform: scale(1.01);
+  transition: transform 0.3s ease;
 }
 
 /* EMAIL INPUT FORM */
-input{
-    width: 100%;
+input {
+  width: 100%;
 }
 
-label{
-    font-family: Verdana, Tahoma, sans-serif, sans-serif;
+label {
+  font-family: Verdana, Tahoma, sans-serif, sans-serif;
 }
 
-input[type=text], input[type=email] {
-    padding: 2px 2px;
-    margin: 8px 0;
-    border: none;
-    border-bottom: 2px solid rgb(28, 0, 128);
+input[type="text"],
+input[type="email"] {
+  padding: 2px 2px;
+  margin: 8px 0;
+  border: none;
+  border-bottom: 2px solid rgb(28, 0, 128);
 }
 
-input[type=radio] {
-    width: 40px;
+input[type="radio"] {
+  width: 40px;
 }
 
-input[type=radio] + label {
-    color: black;
+input[type="radio"] + label {
+  color: black;
 }
 
 textarea {
-    size:100%;
-    border: 1px solid rgb(19, 0, 128);
+  size: 100%;
+  border: 1px solid rgb(19, 0, 128);
 }
 
-input[type=submit] {
-    background-color: rgb(0, 9, 128);
-    color: rgb(255, 255, 255);
-    width: 75%;
+input[type="submit"] {
+  background-color: rgb(0, 9, 128);
+  color: rgb(255, 255, 255);
+  width: 75%;
 }
 /* 
 #subject-label {
@@ -195,14 +279,14 @@ input[type=submit] {
 } */
 
 .form-container {
-    width: 500px; /* Smaller container */
-    height: 500px; /* Adjust height as needed */
-    margin: 50px auto; /* Centers horizontally */
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-/* 
+  width: 500px; /* Smaller container */
+  height: 500px; /* Adjust height as needed */
+  margin: 50px auto; /* Centers horizontally */
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  /* 
     border: 2px solid #080079;
     border-radius: 10px;
     padding: 20px;
@@ -211,8 +295,39 @@ input[type=submit] {
 
 /* FOOTER */
 footer {
-    padding: 10px;
-    text-align: center;
-    background: #080079;
-    color: white;
+  padding: 10px;
+  text-align: center;
+  background: #080079;
+  color: white;
+}
+
+@media screen and (max-width: 768px) {
+  nav,
+  main,
+  .form-container {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  main {
+    flex-direction: column;
+    padding: 20px;
+  }
+
+  #left,
+  #right {
+    width: 100%;
+    padding: 20px; /* optional: reduce padding for mobile */
+  }
+}
+
+@media screen and (max-width: 600px) {
+  #nrl-ladder-title h2 {
+    font-size: 1.2em;
+  }
+
+  #nrl-ladder-imgph {
+    padding: 15px;
+  }
 }
